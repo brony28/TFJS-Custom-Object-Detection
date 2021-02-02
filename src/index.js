@@ -12,6 +12,7 @@ async function load_model() {
     // You can choose whatever IP and PORT you want in the "http://127.0.0.1:8080/model.json" just set it before in your https server
     //const model = await loadGraphModel("http://127.0.0.1:8080/model.json");
     const model = await loadGraphModel("https://raw.githubusercontent.com/brony28/TFJS-Custom-Object-Detection/master/models/hello-world/model.json");
+    // const model = await loadGraphModel("https://raw.githubusercontent.com/hugozanini/TFJS-object-detection/master/models/kangaroo-detector/model.json");
     return model;
   }
 
@@ -23,20 +24,32 @@ let classesDir = {
     2: {
         name: 'mcqueen',
         id: 2,
-    }
+    },
     3: {
         name: 'mickey',
         id: 3,
-    }
+    },
     4: {
         name: 'mrbean',
         id: 4,
-    }
+    },
     5: {
         name: 'scooby',
         id: 5,
     }
 }
+
+// let classesDir = {
+//     1: {
+//         name: 'Kangaroo',
+//         id: 1,
+//     }, 
+//     2: {
+//         name: 'Others',
+//         id: 2,
+//     }
+// }
+
 
 class App extends React.Component {
   videoRef = React.createRef();
