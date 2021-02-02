@@ -11,18 +11,30 @@ async function load_model() {
     // It's possible to load the model locally or from a repo
     // You can choose whatever IP and PORT you want in the "http://127.0.0.1:8080/model.json" just set it before in your https server
     //const model = await loadGraphModel("http://127.0.0.1:8080/model.json");
-    const model = await loadGraphModel("https://raw.githubusercontent.com/NSTiwari/TFJS-Custom-Object-Detection/master/models/new-kangaroo-detector/model.json");
+    const model = await loadGraphModel("https://raw.githubusercontent.com/brony28/TFJS-Custom-Object-Detection/master/models/hello-world/model.json");
     return model;
   }
 
 let classesDir = {
     1: {
-        name: 'Kangaroo',
+        name: 'doraemon',
         id: 1,
     }, 
     2: {
-        name: 'Other',
+        name: 'mcqueen',
         id: 2,
+    }
+    3: {
+        name: 'mickey',
+        id: 3,
+    }
+    4: {
+        name: 'mrbean',
+        id: 4,
+    }
+    5: {
+        name: 'scooby',
+        id: 5,
     }
 }
 
